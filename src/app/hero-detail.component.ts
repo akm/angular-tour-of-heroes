@@ -8,17 +8,8 @@ import { HeroService }         from './hero.service';
 import 'rxjs/add/operator/switchMap';
 
 @Component({
-  selector: 'hero-detail',
-  template: `
-    <div *ngIf="hero">
-      <h2>{{hero.name}} details!</h2>
-      <div><label>id: </label>{{hero.id}}</div>
-      <div>
-        <label>name: </label>
-        <input [(ngModel)]="hero.name" placeholder="name"/>
-      </div>
-    </div>
-  `
+    selector: 'hero-detail',
+    templateUrl: './hero-detail.component.html',
 })
 export class HeroDetailComponent implements OnInit {
     ngOnInit(): void {
@@ -34,4 +25,8 @@ export class HeroDetailComponent implements OnInit {
         private route: ActivatedRoute,
         private location: Location
     ) {}
+
+    goBack(): void {
+        this.location.back();
+    }
 }
