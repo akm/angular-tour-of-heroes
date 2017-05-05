@@ -11,7 +11,13 @@ import { HeroService }         from './hero.service';
 @NgModule({
     imports:      [
         BrowserModule,
-        FormsModule
+        FormsModule,
+        RouterModule.forRoot([
+            {
+                path: 'heroes',
+                component: HeroesComponent
+            }
+        ])
     ],
     declarations: [
         AppComponent,
@@ -24,10 +30,3 @@ import { HeroService }         from './hero.service';
     bootstrap:    [ AppComponent ]
 })
 export class AppModule { }
-
-RouterModule.forRoot([
-  {
-    path: 'heroes',
-    component: HeroesComponent
-  }
-])
