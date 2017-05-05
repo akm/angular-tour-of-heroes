@@ -3,6 +3,7 @@ import { Hero } from './hero';
 import { HeroService } from './hero.service';
 
 @Component({
+  providers: [HeroService],
   selector: 'my-app',
   styles:  [`
   .selected {
@@ -68,6 +69,9 @@ export class AppComponent  {
     title = 'Tour of Heroes';
     heroes: Hero[];
     selectedHero: Hero;
+
+    constructor(private heroService: HeroService) { }
+
     onSelect(hero: Hero): void {
         this.selectedHero = hero;
     }
