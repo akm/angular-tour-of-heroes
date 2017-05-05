@@ -56,7 +56,6 @@ import { OnInit } from '@angular/core';
   }
   `],
   template: `
-  <h1>{{title}}</h1>
   <h2>My Heroes</h2>
   <ul class="heroes">
     <li *ngFor="let hero of heroes" (click)="onSelect(hero)" [class.selected]="hero === selectedHero">
@@ -71,7 +70,6 @@ export class HeroesComponent implements OnInit {
         this.getHeroes();
     }
 
-    title = 'Tour of Heroes';
     heroes: Hero[];
     selectedHero: Hero;
 
