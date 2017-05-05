@@ -5,7 +5,7 @@ import { OnInit } from '@angular/core';
 
 @Component({
   providers: [HeroService],
-  selector: 'my-app',
+  selector: 'my-heroes',
   styles:  [`
   .selected {
     background-color: #CFD8DC !important;
