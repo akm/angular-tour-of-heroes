@@ -66,7 +66,7 @@ import { OnInit } from '@angular/core';
   <hero-detail [hero]="selectedHero"></hero-detail>
   `
 })
-export class AppComponent implements OnInit {
+export class HeroesComponent implements OnInit {
     ngOnInit(): void {
         this.getHeroes();
     }
